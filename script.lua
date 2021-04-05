@@ -1,3 +1,4 @@
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Drift = Instance.new("TextButton")
@@ -20,6 +21,9 @@ Frame.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
 Frame.BorderSizePixel = 5
 Frame.Position = UDim2.new(0.0527363196, 0, 0.415697664, 0)
 Frame.Size = UDim2.new(0, 373, 0, 343)
+Frame.Visible = true
+Frame.Active = true
+Frame.Draggable = true
 
 Drift.Name = "Drift"
 Drift.Parent = Frame
