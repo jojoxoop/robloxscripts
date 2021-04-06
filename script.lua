@@ -13,7 +13,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.Workspace
+ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
