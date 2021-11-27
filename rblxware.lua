@@ -268,7 +268,7 @@ TextBox.BackgroundColor3 = Color3.new(0.333333, 0.333333, 0.333333)
 TextBox.Position = UDim2.new(0, 0, 1, -25)
 TextBox.Size = UDim2.new(0, 150, 0, 25)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "Insert Player Name"
+TextBox.Text = "Insert Player Name (key f to tp to player)"
 TextBox.TextColor3 = Color3.new(1, 1, 1)
 TextBox.TextScaled = true
 TextBox.TextSize = 14
@@ -279,7 +279,7 @@ TextBox.TextWrapped = true
 
 
 game:GetService("UserInputService").InputBegan:connect(function(key)
-if key.KeyCode == Enum.KeyCode.E then --Replace E with the key you would like to be pressed
+if key.KeyCode == Enum.KeyCode.F then 
 local ooooooof = TextBox.Text
 local plr1 = game.Players.LocalPlayer.Character
 local plr2 = game.Workspace:FindFirstChild(ooooooof)
