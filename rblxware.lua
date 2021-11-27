@@ -54,6 +54,21 @@ MainFrame.Selectable = true
 MainFrame.Size = UDim2.new(0, 293, 0, 225)
 MainFrame.Active = true
 MainFrame.Draggable = true
+local guihidden = 0
+local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+	if key == "p" then
+		if guihidden == 0 then
+			MainFrame.Visible = false
+			guihidden = guihidden + 1
+		else
+			MainFrame.Visible = true
+			guihidden = 0
+		end
+	end
+end)
+
 
 ScrollingFrame.Parent = MainFrame
 ScrollingFrame.Active = true
