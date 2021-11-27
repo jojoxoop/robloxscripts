@@ -16,9 +16,13 @@ local ReAlive = Instance.new("TextButton")
 local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 local DamageBoss = Instance.new("TextButton")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local DamageWitch = Instance.new("TextButton")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local TeleportGUI = Instance.new("TextButton")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
 local TextLabel = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
-local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local Frame = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
@@ -28,13 +32,14 @@ local INFO = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
-local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
-local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
-local UICorner_6 = Instance.new("UICorner")
 local UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
+local UICorner_6 = Instance.new("UICorner")
+local UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
 
+--Properties:
 --Properties:
 
 TemmysRBLXwarescript.Name = "Temmy's RBLXware script"
@@ -71,7 +76,7 @@ GetItem.TextColor3 = Color3.fromRGB(255, 255, 255)
 GetItem.TextSize = 14.000
 GetItem.TextWrapped = true
 GetItem.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.HalloweenBossMap2018.Obby.PadMiddle.WinParte.CFrame
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.HalloweenBossMap2018.Obby.PadMiddle.WinPart.CFrame
 end)
 
 UIAspectRatioConstraint.Parent = GetItem
@@ -210,18 +215,82 @@ DamageBoss.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 DamageBoss.Position = UDim2.new(0.511961699, 0, 0.255457282, 0)
 DamageBoss.Size = UDim2.new(0, 74, 0, 33)
 DamageBoss.Font = Enum.Font.SourceSans
-DamageBoss.Text = "Damage Bosses"
+DamageBoss.Text = "Damage Pyscho"
 DamageBoss.TextColor3 = Color3.fromRGB(255, 255, 255)
 DamageBoss.TextSize = 14.000
 DamageBoss.TextWrapped = true
 DamageBoss.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.HalloweenBossMap2018.Obby.PadRight.WinPart.CFrame
-	wait(1)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.HalloweenBossMap2018.Obby.PadLeft.WinPart.CFrame
 end)
 		
 UIAspectRatioConstraint_7.Parent = DamageBoss
 UIAspectRatioConstraint_7.AspectRatio = 2.242
+		
+DamageWitch.Name = "DamageWitch"
+DamageWitch.Parent = ScrollingFrame
+DamageWitch.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+DamageWitch.Position = UDim2.new(0.0813396871, 0, 0.346568406, 0)
+DamageWitch.Size = UDim2.new(0, 74, 0, 33)
+DamageWitch.Font = Enum.Font.SourceSans
+DamageWitch.Text = "Damage Bosses"
+DamageWitch.TextColor3 = Color3.fromRGB(255, 255, 255)
+DamageWitch.TextSize = 14.000
+DamageWitch.TextWrapped = true
+DamageWitch.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.HalloweenBossMap2018.Obby.PadLeft.WinPart.CFrame
+end)
+
+UIAspectRatioConstraint_8.Parent = DamageWitch
+UIAspectRatioConstraint_8.AspectRatio = 2.242
+
+TeleportGUI.Name = "TeleportGUI"
+TeleportGUI.Parent = ScrollingFrame
+TeleportGUI.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TeleportGUI.Position = UDim2.new(0.511961699, 0, 0.348790616, 0)
+TeleportGUI.Size = UDim2.new(0, 74, 0, 33)
+TeleportGUI.Font = Enum.Font.SourceSans
+TeleportGUI.Text = "Teleport GUI"
+TeleportGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportGUI.TextSize = 14.000
+TeleportGUI.TextWrapped = true
+TeleportGUI.MouseButton1Down:connect(function()
+ -- Objects
+print("attempted to load")
+local ScreenGui = Instance.new("ScreenGui")
+local TextBox = Instance.new("TextBox")
+
+-- Properties
+
+ScreenGui.Parent = game.CoreGui
+
+TextBox.Parent = ScreenGui
+TextBox.BackgroundColor3 = Color3.new(0.333333, 0.333333, 0.333333)
+TextBox.Position = UDim2.new(0, 0, 1, -25)
+TextBox.Size = UDim2.new(0, 150, 0, 25)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "Insert Player Name"
+TextBox.TextColor3 = Color3.new(1, 1, 1)
+TextBox.TextScaled = true
+TextBox.TextSize = 14
+TextBox.TextWrapped = true
+
+-- Scripts
+
+
+
+game:GetService("UserInputService").InputBegan:connect(function(key)
+if key.KeyCode == Enum.KeyCode.E then --Replace E with the key you would like to be pressed
+local ooooooof = TextBox.Text
+local plr1 = game.Players.LocalPlayer.Character
+local plr2 = game.Workspace:FindFirstChild(ooooooof)
+plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+end
+end)
+end)
+		
+UIAspectRatioConstraint_9.Parent = TeleportGUI
+UIAspectRatioConstraint_9.AspectRatio = 2.242
+
 
 TextLabel.Parent = MainFrame
 TextLabel.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
